@@ -1,5 +1,6 @@
-from preprocess import load_data, preprocess_data
-from model import train_model, evaluate_model
+from src.preprocess import load_data, preprocess_data
+from src.model import train_model, evaluate_model
+
 
 def main():
     # Load and preprocess data
@@ -13,6 +14,7 @@ def main():
     accuracy, report = evaluate_model(model, X_test, y_test)
     print(f"Accuracy: {accuracy}")
     print(f"Classification Report:\n{report}")
+
 
 if __name__ == "__main__":
     main()

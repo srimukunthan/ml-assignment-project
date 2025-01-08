@@ -1,5 +1,5 @@
 import numpy as np
-from src.model import train_model, evaluate_model
+from model import train_model, evaluate_model
 
 def test_train_and_evaluate_model():
     X_train = np.random.rand(100, 5)

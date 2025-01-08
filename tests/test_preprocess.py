@@ -1,5 +1,5 @@
 import pandas as pd
-from src.preprocess import preprocess_data
+from preprocess import preprocess_data
 
 def test_preprocess_data():
     data = pd.DataFrame({

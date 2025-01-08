@@ -3,13 +3,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 
-
 def load_data(file_path):
     """Load the wine quality dataset."""
     data = pd.read_csv(file_path, sep=';')
 
     return data
-
 
 
 def preprocess_data(data):

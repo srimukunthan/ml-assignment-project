@@ -8,9 +8,9 @@ def main():
     if not os.path.exists('artifacts'):
         os.makedirs('artifacts')
     # Load and preprocess data
-    data = load_data("data/winequality-red.csv")
-    X_train, X_test, y_train, y_test = preprocess_data(data)
-
+    data = load_data("data/breast_cancer_data.csv")
+    X_train, X_test, y_train, y_test, scaler = preprocess_data(data)
+    print("Training feature shape:", X_train.shape)
     # Train the model
     model = train_model(X_train, y_train)
 
@@ -20,6 +20,7 @@ def main():
     print(f"Classification Report:\n{report}")
     joblib.dump(model, "artifacts/model.joblib")
     print("Model saved to artifacts/model.joblib")
+    joblib.dump(scaler, "artifacts/scaler.joblib")
 
 
 if __name__ == "__main__":

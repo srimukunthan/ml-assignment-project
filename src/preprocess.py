@@ -10,10 +10,9 @@ def load_data(file_path):
 
 
 def preprocess_data(data):
-    """Preprocess the data by splitting into features and target and scaling."""
-    X = data.drop(columns=['target'])  # Assuming 'target' is the column name for the labels
+    """Preprocess the data by splitting into features  target and scaling."""
+    X = data.drop(columns=['target'])
     y = data['target']
-    
     # Train-test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,
                                                         random_state=42)

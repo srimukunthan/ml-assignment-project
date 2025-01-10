@@ -8,7 +8,7 @@ def main():
     if not os.path.exists('artifacts'):
         os.makedirs('artifacts')
     # Load and preprocess data
-    data = load_data("../data/breast_cancer_data.csv")
+    data = load_data("data/breast_cancer_data.csv")
     X_train, X_test, y_train, y_test, scaler = preprocess_data(data)
     print("Training feature shape:", X_train.shape)
     # Train the model

@@ -6,9 +6,9 @@ def test_preprocess_data():
     data = pd.DataFrame({
         "feature" + str(i): [1, 2, 3, 4] for i in range(1, 32)  # 31 features
     })
-    data["quality"] = [3, 7, 5, 8]  # Target variable
+    data["target"] = [3, 7, 5, 8]  # Target variable, changed to 'target' for compatibility
 
-    X_train, X_test, y_train, y_test = preprocess_data(data)
+    X_train, X_test, y_train, y_test, scaler = preprocess_data(data)
 
     # Check the shapes of the splits
     assert len(X_train) == 3  # 75% for training

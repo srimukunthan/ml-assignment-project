@@ -2,8 +2,15 @@
 A simple ML project with a CI/CD pipeline.
 
 # Hyperparameter tuning and choosing best performing parameters
+![img_4.png](img_4.png)
 
+![img_5.png](img_5.png)
 
+# Code for hyperparameter tuning using **GridSearchCV**
+![img_6.png](img_6.png)
+
+### Hyperparameters passed
+![img_7.png](img_7.png)
 
 # Docker image building and running steps:
 

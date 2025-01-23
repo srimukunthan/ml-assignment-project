@@ -31,3 +31,5 @@ docker run -p 5050:5050 ml-flask-app
 ### API response for requested features
 
 ![img_3.png](images/img_3.png)
+
+![img.png](images/img_8.png)

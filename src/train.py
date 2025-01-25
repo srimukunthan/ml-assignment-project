@@ -21,7 +21,7 @@ def main():
     }
 
     # Train the model
-    model = train_model(X_train, y_train,param_grid)
+    model = train_model(X_train, y_train, param_grid)
 
     # Evaluate the model
     accuracy, report = evaluate_model(model, X_test, y_test)

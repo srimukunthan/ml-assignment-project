@@ -8,8 +8,8 @@ def test_train_and_evaluate_model():
     y_train = np.random.randint(0, 2, size=100)
     X_test = np.random.rand(20, 31)    # 31 features
     y_test = np.random.randint(0, 2, size=20)
-
-    model = train_model(X_train, y_train)
+    param_grid = {"n_estimators": [100, 200], "max_depth": [None, 10]}
+    model = train_model(X_train, y_train, param_grid)
     accuracy, _ = evaluate_model(model, X_test, y_test)
 
     # Check if the accuracy is within a reasonable range (between 0 and 1)

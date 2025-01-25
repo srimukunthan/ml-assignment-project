@@ -2,6 +2,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import GridSearchCV
 
+
 def train_model(X_train, y_train, param_grid):
     """Train a Random Forest classifier."""
     print("Train model")

@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 import joblib
 import numpy as np
-from sklearn.preprocessing import StandardScaler
 
 
 app = Flask(__name__)
@@ -10,9 +9,11 @@ app = Flask(__name__)
 model = joblib.load("/app/model.joblib")
 scaler = joblib.load("/app/scaler.joblib")
 
+
 @app.route("/")
 def home():
     return "RandomForest Model is Ready for Predictions!"
+
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -34,6 +35,6 @@ def predict():
     except Exception as e:
         return jsonify({"error": str(e)})
 
+
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=5050, debug=True)
- 
+    app.run(host='0.0.0.0', port=5050, debug=True)
